@@ -72,6 +72,8 @@ const groupedNav = navigation.reduce(
 		const menuButton = document.querySelector("[data-mobile-menu-button]")!;
 		const sidebarLinks = document.querySelectorAll("[data-sidebar-link]")!;
 
+		if (!sidebar || !overlay || !menuButton) return;
+
 		function closeSidebar() {
 			sidebar.classList.add("-translate-x-full");
 			overlay.classList.add("hidden");
